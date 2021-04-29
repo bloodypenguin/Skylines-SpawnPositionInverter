@@ -7,9 +7,9 @@ namespace SpawnPositionInverter
     {
         private const int ButtonSize = 16;
 
-        public static UISprite CreateSwapSptite(UIComponent parentComponent, MouseEventHandler handler)
+        public static UISprite CreateSwapSptite(UIComponent parentComponent, MouseEventHandler handler, Vector3 offset)
         {
-            return CreateSprite("InvertPositionsButton", null, new Vector3(),
+            return CreateSprite("InvertPositionsButton", null, offset,
                 parentComponent, handler);
         }
 
@@ -29,7 +29,7 @@ namespace SpawnPositionInverter
             sprite.tooltip = tooltip;
             sprite.eventClick += handler;
             sprite.AlignTo(parentComponent, UIAlignAnchor.TopRight);
-            sprite.relativePosition = new Vector3 (11, 265)  + offset;
+            sprite.relativePosition = offset;
             return sprite;
         }
 
@@ -42,7 +42,7 @@ namespace SpawnPositionInverter
             }
             label.text = text;
             label.AlignTo(parentComponent, UIAlignAnchor.TopRight);
-            label.relativePosition = new Vector3(11 + ButtonSize + 2, 265) + offset;
+            label.relativePosition = offset;
             return label;
         }
     }

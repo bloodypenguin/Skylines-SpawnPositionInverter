@@ -51,8 +51,8 @@ namespace SpawnPositionInverter
                     return;
                 }
                 _cityServiceInfoPanel = infoPanel;
-                _swapSprite = UiUtil.CreateSwapSptite(_cityServiceInfoPanel.component, SwapHandler);
-                _swapLabel = UiUtil.CreateLabel("Swap spawn and unspawn positions", _cityServiceInfoPanel.component, new Vector3());
+                _swapSprite = UiUtil.CreateSwapSptite(_cityServiceInfoPanel.component, SwapHandler, new Vector3 (162, 240) );
+                _swapLabel = UiUtil.CreateLabel("Swap spawn and unspawn positions", _cityServiceInfoPanel.component, new Vector3 (178, 240));
                 _initialized = true;
             }
             if (!_cityServiceInfoPanel.component.isVisible)
